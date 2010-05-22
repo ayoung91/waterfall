@@ -1,0 +1,44 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 0.8i $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{rasiel:1999}{book}{}
+  \name{author}{1}{%
+    {{Rasiel}{R.}%
+     {Ethan~M.}{E.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {McGraw-Hill}%
+  }
+  \list{location}{1}{%
+    {New York}%
+  }
+  \strng{namehash}{REM1}
+  \strng{fullhash}{REM1}
+  \field{sortinit}{R}
+  \field{shorttitle}{The {McK}insey Way}
+  \field{title}{The {McK}insey Way: Using the Techniques of the World's Top
+  Strategic Consultants to Help You and Your Business}
+  \field{year}{1999}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

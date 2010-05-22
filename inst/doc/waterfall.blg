@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99c (TeX Live 2009)
+The top-level auxiliary file: waterfall.aux
+The style file: biblatex.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: waterfall-blx.bib
+Database file #2: waterfall.bib
+Biblatex version: 0.8i
+You've used 2 entries,
+            5526 wiz_defined-function locations,
+            1057 strings with 8014 characters,
+and the built_in function-call counts, 4321 in all, are:
+= -- 198
+> -- 157
+< -- 26
++ -- 75
+- -- 48
+* -- 205
+:= -- 501
+add.period$ -- 0
+call.type$ -- 2
+change.case$ -- 30
+chr.to.int$ -- 34
+cite$ -- 2
+duplicate$ -- 368
+empty$ -- 416
+format.name$ -- 50
+if$ -- 970
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 0
+newline$ -- 43
+num.names$ -- 66
+pop$ -- 317
+preamble$ -- 1
+purify$ -- 31
+quote$ -- 0
+skip$ -- 245
+stack$ -- 0
+substring$ -- 212
+swap$ -- 103
+text.length$ -- 41
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 66
+warning$ -- 0
+while$ -- 69
+width$ -- 0
+write$ -- 40
