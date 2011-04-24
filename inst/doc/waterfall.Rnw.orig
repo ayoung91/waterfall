@@ -18,7 +18,7 @@
 \newcommand\waterfallchart{\code{waterfallchart}\xspace}
 
 %% almost as usual
-\author{James P. Howard, II\\Board of Governors of the Federal Reserve System}
+\author{James P. Howard, II\\University of Maryland Baltimore County}
 \title{Waterfall Charts in \R}
 
 %% for pretty printing and a nice hypersummary also set:
@@ -41,6 +41,17 @@
 %% end of declarations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Prime up R
+<<label=startup,include=FALSE,echo=FALSE>>=
+library('waterfall')
+data(jaquith)
+data(rasiel)
+@
+<<label=rasielplot,include=FALSE,echo=FALSE>>=
+waterfallplot(rasiel$value)
+@
+<<label=jaquithchart,include=false,echo=FALSE>>=
+waterfallchart(factor~score, data=jaquith)
+@
 
 \begin{document}
 
@@ -60,7 +71,9 @@ balance.
 \begin{figure}[htbp]
 \setkeys{Gin}{width=0.5\textwidth}
 \centering  
-\includegraphics{waterfall-rasielplot}
+<<label=rasielplot,fig=TRUE,echo=FALSE>>=
+<<rasielplot>>
+@
 \caption{\citet{rasiel:1999} sample for the Acme Widget Corporation
 illustrates the use of the \waterfallplot function.}
 \label{fig:rasielplot}
@@ -90,7 +103,11 @@ display negative components in the sum.
 \begin{figure}[htbp]
 \setkeys{Gin}{width=0.5\textwidth}
 \centering
-\includegraphics{waterfall-multibarplot}
+<<label=multibarplot,fig=TRUE,echo=false>>=
+multi = c(1,2,2,4,3,6)
+dim(multi) <- c(2,3)
+barplot(multi, beside=TRUE)
+@
 \caption{A simple bar plot with multiple data sets}
 \label{fig:multibarplot}
 \end{figure}

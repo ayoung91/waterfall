@@ -1,44 +1,26 @@
-% $ biblatex auxiliary file $
-% $ biblatex version 0.8i $
-% Do not modify the above lines!
-%
-% This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
-%
-\begingroup
-\makeatletter
-\@ifundefined{ver@biblatex.sty}
-  {\@latex@error
-     {Missing 'biblatex' package}
-     {The bibliography requires the 'biblatex' package.}
-      \aftergroup\endinput}
-  {}
-\endgroup
+\begin{thebibliography}{2}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
 
-\entry{rasiel:1999}{book}{}
-  \name{author}{1}{%
-    {{Rasiel}{R.}%
-     {Ethan~M.}{E.~M.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {McGraw-Hill}%
-  }
-  \list{location}{1}{%
-    {New York}%
-  }
-  \strng{namehash}{REM1}
-  \strng{fullhash}{REM1}
-  \field{sortinit}{R}
-  \field{shorttitle}{The {McK}insey Way}
-  \field{title}{The {McK}insey Way: Using the Techniques of the World's Top
-  Strategic Consultants to Help You and Your Business}
-  \field{year}{1999}
-\endentry
+\bibitem[{Box \emph{et~al.}(2003)Box, Bisgaard, Graves, Kulahci, Marko, James,
+  Van~Gilder, Ting, Zatorski, and Wu}]{box:2003}
+Box G, Bisgaard S, Graves S, Kulahci M, Marko K, James J, Van~Gilder J, Ting T,
+  Zatorski H, Wu C (2003).
+\newblock \enquote{Performance Evaluation of Dynamic Monitoring Systems: The
+  Waterfall Chart.}
+\newblock \emph{Quality Engineering}, \textbf{16}(2), 183--191.
 
-\lossort
-\endlossort
+\bibitem[{Rasiel(1999)}]{rasiel:1999}
+Rasiel EM (1999).
+\newblock \emph{The {McK}insey Way: Using the Techniques of the World's Top
+  Strategic Consultants to Help You and Your Business}.
+\newblock McGraw-Hill, New York.
 
-\endinput
+\end{thebibliography}
