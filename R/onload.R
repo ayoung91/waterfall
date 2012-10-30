@@ -21,13 +21,11 @@
 ## OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 ## SUCH DAMAGE.
 
-.First.lib <-
-function(libname, pkgname, ...) {
-    if (is.R()) {
-        library(package = "lattice")
-	lattice.options(panel.waterfallchart = "panel.waterfallchart")
-	lattice.options(prepanel.waterfallchart = "prepanel.waterfallchart")
-	lattice.options(waterfallchart.summaryname = "Total")
-        return(TRUE)
-    }
+.onLoad <- function(libname, pkgname, ...) {
+	if (is.R()) {
+		lattice.options(panel.waterfallchart = "panel.waterfallchart")
+		lattice.options(prepanel.waterfallchart = "prepanel.waterfallchart")
+		lattice.options(waterfallchart.summaryname = "Total")
+		return(TRUE)
+	}
 }
