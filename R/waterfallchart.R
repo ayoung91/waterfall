@@ -156,14 +156,14 @@ panel.waterfallchart <- function (x, y, box.ratio = 1, box.width = box.ratio/(1 
 		return()
 	x <- as.numeric(x[keep])
 	y <- as.numeric(y[keep])
-	grplst <- sort(unique(groups))
+	grplst <- sort(unique(x))
 	baseline <- rep(origin, (l = length(x) + length(grplst)) + 1)
 
 	##  The following block of code reorganizes the data into the final
 	##  format.  The same block is used above.
 	if (horizontal) {
-		data <- merge(data.frame(x, y, groups, groupsy = y)[order(groups, y), ], data.frame(x = rep(NA, length(grplst)), y = rep(NA, length(grplst)), groups = grplst, groupsy = grplst), all = TRUE)
-		data <- data[order(data$groups, data$y), ]
+		data <- merge(data.frame(x, y, groups, groupsy = y)[order(x, y), ], data.frame(x = rep(NA, length(grplst)), y = rep(NA, length(grplst)), groups = grplst, groupsy = grplst), all = TRUE)
+		data <- data[order(data$x, data$y), ]
 		if (is.null(origin)) {
 			origin <- current.panel.limits()$xlim[1]
 			reference <- FALSE
@@ -222,8 +222,8 @@ prepanel.waterfallchart <- function (x, y, horizontal = FALSE, origin = 0, group
         ##  The following block of code reorganizes the data into the final
         ##  format.  The same block is used above.
         if (horizontal) {
-            data <- merge(data.frame(x, y, groups, groupsy = y)[order(groups, y), ], data.frame(x = rep(NA, length(grplst)), y = rep(NA, length(grplst)), groups = grplst, groupsy = grplst), all = TRUE)
-            data <- data[order(data$groups, data$y), ]
+            data <- merge(data.frame(x, y, groups, groupsy = y)[order(x, y), ], data.frame(x = rep(NA, length(grplst)), y = rep(NA, length(grplst)), groups = grplst, groupsy = grplst), all = TRUE)
+            data <- data[order(data$x, data$y), ]
             list(ylim = levels(factor(data$groupsy, levels = data$groupsy)),
                  yat = sort(unique(as.numeric(data$groupsy, levels = data$groupsy))),
                  xlim = {
@@ -235,8 +235,8 @@ prepanel.waterfallchart <- function (x, y, horizontal = FALSE, origin = 0, group
                  }, dx = 1, dy = 1)
         }
         else {
-            data <- merge(data.frame(x, y, groups, groupsx = x)[order(groups, x), ], data.frame(x = rep(NA, length(grplst)), y = rep(NA, length(grplst)), groups = grplst, groupsx = grplst), all = TRUE)
-            data <- data[order(data$groups, data$x), ]
+            data <- merge(data.frame(x, y, groups, groupsx = x)[order(x, x), ], data.frame(x = rep(NA, length(grplst)), y = rep(NA, length(grplst)), groups = grplst, groupsx = grplst), all = TRUE)
+            data <- data[order(data$x, data$x), ]
             list(xlim = levels(factor(data$groupsx, levels = data$groupsx)),
                  xat = sort(unique(as.numeric(data$groupsx, levels = data$groupsx))),
                  ylim = {
